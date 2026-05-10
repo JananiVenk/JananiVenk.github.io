@@ -90,10 +90,9 @@
 </style>
 </head>
 <body>
-<!-- Floating squares background -->
+
 <div id="bg-canvas"></div>
 
-<!-- Nav -->
 <nav>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
@@ -102,7 +101,6 @@
   <a href="#skills">Skills</a>
 </nav>
 
-<!-- Hero -->
 <section id="hero">
   <p class="hero-label">AI Engineer · Los Angeles, CA</p>
   <h1>Hi! My name is <strong>Janani Venkatramani.</strong></h1>
@@ -117,22 +115,16 @@
   </div>
 </section>
 
-<!-- Experience -->
 <section id="experience">
   <p class="section-fn"><span>Experience</span></p>
-
   <div class="tl-legend">
     <span>work &amp; internships</span>
     <span>education</span>
   </div>
-
   <div class="timeline">
 
-    <!-- Row 1: UCLA MEng (edu right) — most recent -->
     <div class="tl-row" data-side="right" data-skills="Large-Scale ML,Neural Networks,Reinforcement Learning,Robot Learning">
-      <div class="tl-cell left empty">
-        <p class="tl-role-title">&nbsp;</p>
-      </div>
+      <div class="tl-cell left empty"><p class="tl-role-title">&nbsp;</p></div>
       <div class="tl-mid"><div class="tl-dot"></div></div>
       <div class="tl-cell right">
         <p class="tl-date">Expected Dec 2026 · GPA: 3.47 / 4.0</p>
@@ -145,7 +137,6 @@
       </div>
     </div>
 
-    <!-- Row 2: AI Engineer (work left) — Aug 2024–Aug 2025 -->
     <div class="tl-row" data-side="left" data-skills="LLaMA 3.2,LoRA / QLoRA,LangChain,FastAPI,Whisper,Gemma-3-4B,MongoDB,Google OR-Tools,LLM fine-tuning,Python">
       <div class="tl-cell left">
         <p class="tl-date">Aug 2024 – Aug 2025 · Chennai</p>
@@ -160,7 +151,6 @@
       <div class="tl-cell right empty"><p class="tl-role-title">&nbsp;</p></div>
     </div>
 
-    <!-- Row 3: ML Intern (work left) — Dec 2023–Jul 2024 -->
     <div class="tl-row" data-side="left" data-skills="CNN,GPT-4o Vision,Hierarchical NNs,Data augmentation,PyTorch,scikit-learn,Computer vision">
       <div class="tl-cell left">
         <p class="tl-date">Dec 2023 – Jul 2024 · Chennai</p>
@@ -175,7 +165,6 @@
       <div class="tl-cell right empty"><p class="tl-role-title">&nbsp;</p></div>
     </div>
 
-    <!-- Row 4: B.Tech (edu right) — Oct 2020–Jun 2024 -->
     <div class="tl-row" data-side="right" data-skills="Python,C / C++,MySQL,Data Science,Deep Learning,Computer Vision">
       <div class="tl-cell left empty"><p class="tl-role-title">&nbsp;</p></div>
       <div class="tl-mid"><div class="tl-dot"></div></div>
@@ -193,7 +182,6 @@
   </div>
 </section>
 
-<!-- Projects -->
 <section id="projects">
   <p class="section-fn"><span>Projects</span></p>
 
@@ -251,7 +239,7 @@
     <p class="project-desc">Predictive model for diabetes diagnosis with a full explainability layer. Applies SHAP for global feature attribution, LIME for local per-prediction explanations, and an Explainer Dashboard for interactive model exploration — making the model's reasoning transparent and interpretable.</p>
     <p class="project-stack">scikit-learn · SHAP · LIME · Explainer Dashboard · pandas · seaborn · Python</p>
   </div>
- 
+
   <div class="project-card">
     <div class="project-top">
       <p class="project-name">Phidata Video Summarizer</p>
@@ -264,9 +252,9 @@
   </div>
 
   
+
 </section>
 
-<!-- Publication -->
 <section id="publication">
   <p class="section-fn"><span>Publication</span></p>
   <div class="project-card">
@@ -281,7 +269,6 @@
   </div>
 </section>
 
-<!-- Certifications -->
 <section id="certifications">
   <p class="section-fn"><span>Certifications</span></p>
 
@@ -344,7 +331,7 @@
 
 </section>
 
- <section id="skills">
+<section id="skills">
   <p class="section-fn"><span>Skills</span></p>
   <div class="skills-grid">
     <div class="skills-row">
@@ -412,7 +399,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <span>© 2026 Janani Venkatramani</span>
   <a href="https://github.com/JananiVenk" target="_blank">GitHub</a>
@@ -421,40 +407,22 @@
 </footer>
 
 <script>
-  /* Typewriter effect */
-  const words = [
-    "building agentic AI systems.",
-    "computer vision.",
-    "explainable AI.",
-    "learning Transformers.",
-    "competing on Kaggle."
-  ];
+  const words = ["building agentic AI systems.","computer vision.","explainable AI.","learning Transformers.","competing on Kaggle."];
   let wi = 0, ci = 0, deleting = false;
   const el = document.getElementById('typed');
-
   function type() {
     const word = words[wi];
     if (!deleting) {
-      el.textContent = word.slice(0, ci + 1);
-      ci++;
-      if (ci === word.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
+      el.textContent = word.slice(0, ci + 1); ci++;
+      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
     } else {
-      el.textContent = word.slice(0, ci - 1);
-      ci--;
-      if (ci === 0) {
-        deleting = false;
-        wi = (wi + 1) % words.length;
-      }
+      el.textContent = word.slice(0, ci - 1); ci--;
+      if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
     }
     setTimeout(type, deleting ? 45 : 80);
   }
   type();
 
-  /* Timeline interaction */
   document.querySelectorAll('.tl-row').forEach(row => {
     const skillsAttr = row.getAttribute('data-skills');
     if (skillsAttr) {
@@ -467,21 +435,15 @@
         });
       });
     }
-    row.addEventListener('mouseenter', () => {
-      document.querySelectorAll('.tl-row').forEach(r => r.classList.remove('active'));
-      row.classList.add('active');
-    });
-    row.addEventListener('mouseleave', () => {
-      row.classList.remove('active');
-    });
+    row.addEventListener('mouseenter', () => { document.querySelectorAll('.tl-row').forEach(r => r.classList.remove('active')); row.classList.add('active'); });
+    row.addEventListener('mouseleave', () => { row.classList.remove('active'); });
     row.addEventListener('click', () => {
       const isActive = row.classList.contains('active');
       document.querySelectorAll('.tl-row').forEach(r => r.classList.remove('active'));
       if (!isActive) row.classList.add('active');
     });
   });
-</script>
-<script>
+
   const canvas = document.getElementById('bg-canvas');
   const sizes = [14, 18, 22, 26, 20];
   for (let i = 0; i < 8; i++) {
@@ -490,13 +452,7 @@
     const size = sizes[i % sizes.length];
     const dur = 12 + Math.random() * 14;
     const delay = i < 4 ? -(Math.random() * dur) : Math.random() * 4;
-    sq.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${Math.random() * 100}%;
-      animation-duration: ${dur}s;
-      animation-delay: ${delay}s;
-    `;
+    sq.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;animation-duration:${dur}s;animation-delay:${delay}s;`;
     canvas.appendChild(sq);
   }
 </script>
