@@ -131,22 +131,21 @@
     gap: 6px;
   }
  
-  .skill-tag {
-    font-size: 12.5px;
-    padding: 4px 11px;
-    border-radius: 999px;
-    font-weight: 400;
-    border: 1px solid var(--color-border, #e5e5e5);
-    color: var(--color-text, #1a1a1a);
-    background: transparent;
-    transition: background 0.15s;
-  }
- 
-  /* Highlighted tags — primary skills */
-  .skill-tag.primary {
-    background: var(--color-surface, #f5f5f5);
-    border-color: var(--color-border-strong, #ccc);
-  }
+.skill-tag {
+  font-size: 12.5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-weight: 400;
+  border: 1px solid rgba(126,223,168,0.35);
+  color: var(--text);
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.skill-tag.primary {
+  background: transparent;
+  border-color: rgba(126,223,168,0.35);
+}
  
   /* Responsive: stack on small screens */
   @media (max-width: 560px) {
