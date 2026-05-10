@@ -431,6 +431,12 @@
     color: var(--text-muted);
     margin-bottom: 1rem;
   }
+  .skills-grid { display: flex; flex-direction: column; gap: 0.75rem; }
+  .skills-row { display: grid; grid-template-columns: 140px 1fr; align-items: start; gap: 1rem; }
+  .skills-label { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); padding-top: 4px; }
+  .skills-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skills-pill { font-family: 'DM Mono', monospace; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--bg-card); color: var(--text-muted); border: 0.5px solid var(--border-mid); transition: color 0.2s, border-color 0.2s, background 0.2s; }
+  .skills-pill:hover { color: var(--accent); border-color: rgba(126,223,168,0.55); background: var(--bg-card-hover); }
 </style>
 </head>
 <body>
